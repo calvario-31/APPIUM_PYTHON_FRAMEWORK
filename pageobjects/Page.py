@@ -44,6 +44,12 @@ class Page:
     def _general_swipe(self, x1, x2, y1, y2):
         return self._gestures.general_swipe_by_percentages(x1, x2, y1, y2)
 
+    def _horizontal_swipe(self, start, end, anchor):
+        return self._gestures.horizontal_swipe_by_percentages(start, end, anchor)
+
+    def _vertical_swipe(self, start, end, anchor):
+        return self._gestures.vertical_swipe_by_percentages(start, end, anchor)
+
     def _press_back(self):
         return self._gestures.press_back()
 

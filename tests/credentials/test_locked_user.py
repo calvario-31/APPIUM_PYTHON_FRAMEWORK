@@ -10,12 +10,12 @@ class TestLockedUser:
     driver: WebDriver
     login_page: LoginPage
 
-    @pytest.mark.debug
-    @pytest.mark.regression
-    @pytest.mark.smoke
     @allure.title("Locked user test")
     @allure.description("Verifying error message when trying to log with a locked user")
     @allure.severity(allure.severity_level.NORMAL)
+    @allure.testcase("2E5cHwYs", "Test case")
+    @pytest.mark.regression
+    @pytest.mark.smoke
     def test_locked_user(self, locked_user_credentials):
         login_page = LoginPage(self.driver)
         login_page.login(locked_user_credentials["username"], locked_user_credentials["password"])

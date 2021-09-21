@@ -15,7 +15,7 @@ class LoginPage(Page):
     def __init__(self, driver):
         super().__init__(driver)
 
-    @allure.step("Logging with username: {username} and password: {password}")
+    @allure.step("Logging with username: {1} and password: {2}")
     def login(self, username, password):
         self._wait_to_load()
         log.info("Filling username")
