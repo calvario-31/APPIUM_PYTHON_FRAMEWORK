@@ -82,8 +82,8 @@ def test_failed_check(request):
 def write_env_properties(add_allure_environment_property: Callable) -> None:
     global device_name, os_version
     add_allure_environment_property('Device', device_name)
-    add_allure_environment_property('OS', 'Android')
-    add_allure_environment_property('OS Version', os_version)
+    add_allure_environment_property("OS", "Android")
+    add_allure_environment_property("OS Version", os_version)
 
 
 @fixture(scope='session', autouse=True)
