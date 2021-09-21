@@ -1,8 +1,8 @@
 # CompleteFramework
 
-* Url tested: 
+* Apk tested: 
 
-        https://www.saucedemo.com/
+        SauceLabs Apk
 
 * To create virtual environment called "venv":
 
@@ -44,5 +44,5 @@
         virtualenv venv
         source venv/bin/activate
         pip install -r requirements.txt
-        pytest -m ${group} --operative_system="${operative_system}" --os_version="${os_version}" --browser=${browser} --browser_version=${browser_version}
+        pytest -m ${group} --operative_system="${operative_system}" --os_version="${os_version}" --device_name=${device_name}
         deactivate
