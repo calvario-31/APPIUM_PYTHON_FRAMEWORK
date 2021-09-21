@@ -27,13 +27,13 @@
 
 * Run on commandline:
 
-        pytest -m ${tag_name} --browser=${browser}
+       pytest -m ${tag_name} --device_name=${device_name}
 
 * Example:
 
         pytest -m regression --browser=edge
 
-*if no browser then it will run chrome by default*
+*if no device name specified it will take mobile_emulator by default*
 
 * To see allure results:
 
@@ -44,5 +44,5 @@
         virtualenv venv
         source venv/bin/activate
         pip install -r requirements.txt
-        pytest -m ${group} --operative_system="${operative_system}" --os_version="${os_version}" --device_name=${device_name}
+        pytest -m ${group} --os_version="${os_version}" --device_name="${device_name}"
         deactivate

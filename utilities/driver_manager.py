@@ -51,7 +51,7 @@ def build_remote_driver(device_name, os_version):
         'browserstack.networkLogs': 'true'
     }
 
-    driver = webdriver.Remote(remote_url, desired_capabilities=capabilities)
+    driver = webdriver.WebDriver(remote_url, desired_capabilities=capabilities)
 
     return driver
 
