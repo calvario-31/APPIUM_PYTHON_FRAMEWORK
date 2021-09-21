@@ -2,7 +2,6 @@ import os
 
 import allure
 from allure_commons.types import AttachmentType
-from selenium import webdriver
 from appium.webdriver import webdriver
 
 import utilities.log_manager as log

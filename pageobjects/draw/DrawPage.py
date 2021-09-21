@@ -1,8 +1,8 @@
 import allure
 from appium.webdriver.common.mobileby import MobileBy
 
-from pageobjects.Page import Page
 import utilities.log_manager as log
+from pageobjects.Page import Page
 
 
 class DrawPage(Page):

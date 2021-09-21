@@ -1,6 +1,6 @@
 # CompleteFramework
 
-* Apk tested: 
+* Apk tested:
 
         SauceLabs Apk
 

@@ -78,5 +78,3 @@ class TestDraw:
     @pytest.fixture(params=get_standard_credentials())
     def credentials(self, request):
         return request.param
-
-

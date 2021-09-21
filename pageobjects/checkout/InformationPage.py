@@ -29,4 +29,3 @@ class InformationPage(Page):
 
     def _wait_to_load(self):
         self._wait_visibility(self._body_info)
-

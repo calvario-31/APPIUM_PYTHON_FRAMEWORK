@@ -88,7 +88,6 @@ def write_env_properties(add_allure_environment_property: Callable) -> None:
 
 @fixture(scope='session', autouse=True)
 def add_allure_environment_property(request: SubRequest) -> Optional[Callable]:
-
     environment_properties = dict()
 
     def maker(key: str, value: Any):

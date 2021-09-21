@@ -1,8 +1,8 @@
 import allure
 from appium.webdriver.common.mobileby import MobileBy
 
-from pageobjects.Page import Page
 import utilities.log_manager as log
+from pageobjects.Page import Page
 
 
 class LoginPage(Page):
@@ -28,6 +28,10 @@ class LoginPage(Page):
     @allure.step("Verifying the error message is displayed")
     def error_message_is_displayed(self):
         return self._element_is_displayed(self._error_message)
+
+    @allure.step("Verify login page is displayed")
+    def login_page_is_displayed(self):
+        return self._element_is_displayed(self._title)
 
     def _wait_to_load(self):
         self._wait_visibility(self._title)

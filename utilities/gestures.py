@@ -26,7 +26,8 @@ class Gestures:
         actions = TouchAction(self.driver)
         actions.long_press(initial_element, seconds).move_to(final_element).release().perform()
 
-    def general_swipe_by_percentages(self, first_x_percentage, first_y_percentage, second_x_percentage, second_y_percentage):
+    def general_swipe_by_percentages(self, first_x_percentage, first_y_percentage, second_x_percentage,
+                                     second_y_percentage):
         size = self.driver.get_window_size()
         x1 = int(size["width"] * first_x_percentage)
         y1 = int(size["height"] * first_y_percentage)
