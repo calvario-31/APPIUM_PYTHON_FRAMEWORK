@@ -25,19 +25,18 @@ class TestShopping:
     overview_page: OverviewPage
     success_page: SuccessPage
 
-    @pytest.mark.regression
-    @pytest.mark.debug
     @allure.title("Test shopping")
     @allure.description("Verify the shopping e2e functionality")
     @allure.testcase("2E5cHwYs", "Test case")
     @allure.severity(allure.severity_level.CRITICAL)
+    @pytest.mark.regression
     def test_shopping(self, credentials, shopping_list, user_data):
-        self.login_page.login(credentials.get("username"), credentials.get("password"))
+        self.login_page.login(credentials["username"], credentials["password"])
 
         total_sum = 0.0
         for item_to_buy in shopping_list:
-            item_name = item_to_buy.get("name")
-            item_price = item_to_buy.get("price")
+            item_name = item_to_buy["name"]
+            item_price = item_to_buy["price"]
             self.shopping_page.go_to_detail(item_name)
             price = self.item_detail_page.add_to_cart(item_name)
             assert item_price == price
@@ -47,8 +46,8 @@ class TestShopping:
 
         self.top_menu_page.go_to_checkout()
         self.your_cart_page.click_on_checkout()
-        self.information_page.fill_form(user_data.get("firstname"), user_data.get("lastname"),
-                                        user_data.get("zipcode"))
+        self.information_page.fill_form(user_data["firstname"], user_data["lastname"],
+                                        user_data["zipcode"])
 
         assert self.overview_page.get_total_price() == total_sum
         self.overview_page.finish_checkout()

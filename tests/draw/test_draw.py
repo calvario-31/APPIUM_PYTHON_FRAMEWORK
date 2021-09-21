@@ -20,7 +20,7 @@ class TestDraw:
     @allure.testcase("2E5cHwYs", "Test case")
     @pytest.mark.regression
     def test_draw_rectangle(self, credentials):
-        self.login_page.login(credentials.get("username"), credentials.get("password"))
+        self.login_page.login(credentials["username"], credentials["password"])
         self.top_menu_page.go_to_draw_page()
         self.draw_page.draw_rectangle()
         self.draw_page.save_and_clear_canvas()
@@ -31,7 +31,7 @@ class TestDraw:
     @allure.testcase("2E5cHwYs", "Test case")
     @pytest.mark.regression
     def test_draw_square(self, credentials):
-        self.login_page.login(credentials.get("username"), credentials.get("password"))
+        self.login_page.login(credentials["username"], credentials["password"])
         self.top_menu_page.go_to_draw_page()
         self.draw_page.draw_square()
         self.draw_page.save_and_clear_canvas()
@@ -42,7 +42,7 @@ class TestDraw:
     @allure.testcase("2E5cHwYs", "Test case")
     @pytest.mark.regression
     def test_draw_medical_cross(self, credentials):
-        self.login_page.login(credentials.get("username"), credentials.get("password"))
+        self.login_page.login(credentials["username"], credentials["password"])
         self.top_menu_page.go_to_draw_page()
         self.draw_page.draw_medical_cross()
         self.draw_page.save_and_clear_canvas()
@@ -53,7 +53,7 @@ class TestDraw:
     @allure.testcase("2E5cHwYs", "Test case")
     @pytest.mark.regression
     def test_draw_t_letter(self, credentials):
-        self.login_page.login(credentials.get("username"), credentials.get("password"))
+        self.login_page.login(credentials["username"], credentials["password"])
         self.top_menu_page.go_to_draw_page()
         self.draw_page.draw_t_letter()
         self.draw_page.save_and_clear_canvas()
@@ -65,7 +65,7 @@ class TestDraw:
     @pytest.mark.regression
     @pytest.mark.smoke
     def test_draw_x_letter(self, credentials):
-        self.login_page.login(credentials.get("username"), credentials.get("password"))
+        self.login_page.login(credentials["username"], credentials["password"])
         self.top_menu_page.go_to_draw_page()
         self.draw_page.draw_x_letter()
         self.draw_page.save_and_clear_canvas()

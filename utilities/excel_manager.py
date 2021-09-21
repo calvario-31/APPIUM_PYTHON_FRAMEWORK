@@ -27,5 +27,4 @@ def get_all_rows(excel_sheet):
 
         rows_list.append(dictionary_row)
 
-    print(rows_list)
     return rows_list

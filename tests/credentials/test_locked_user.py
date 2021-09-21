@@ -17,9 +17,8 @@ class TestLockedUser:
     @pytest.mark.regression
     @pytest.mark.smoke
     def test_locked_user(self, locked_user_credentials):
-        login_page = LoginPage(self.driver)
-        login_page.login(locked_user_credentials["username"], locked_user_credentials["password"])
-        assert login_page.error_message_is_displayed()
+        self.login_page.login(locked_user_credentials["username"], locked_user_credentials["password"])
+        assert self.login_page.error_message_is_displayed()
 
     def init_pages(self):
         self.login_page = LoginPage(self.driver)
