@@ -20,9 +20,6 @@ class OverviewPage(Page):
         total_price_text = self._scroll_into_text_contains(self._total_price_label_text).text
         log.debug("Total price as text: " + str(total_price_text))
 
-        log.info("Scrolling down to checkout button and click")
-        self._scroll_into_description(self._finish_button).click()
-
         return float(total_price_text[13:])
 
     @allure.step("Finishing checkout")
